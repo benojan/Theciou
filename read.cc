@@ -11,10 +11,10 @@ locale loc(""); //linux下配置utf-8;
 
 struct In
 {
-		wstring xin;
-		wstring yvn;
-		wstring binlih;
-		map<wstring, vector<wstring>> diaos;
+	wstring xin;
+	wstring yvn;
+	wstring binlih;
+	map<wstring, vector<wstring>> diaos;
 };
 
 void wopenSKFile(const string& fileName, map<wstring, vector<In>>& dict)
