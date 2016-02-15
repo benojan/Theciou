@@ -27,7 +27,8 @@ void wopenSKFile(const string& fileName, map<wstring, vector<In>>& dict)
 		return;
 	}
 	wstring line_before;
-	while(getline(win, line_before)) {//一行一字
+	while(getline(win, line_before)) //一行一字
+	{
 		if(line_before==L"") continue;
 		vector<wstring> line_after;
 		split(line_before, L"?", line_after); //拆分字、音：       干        k#on#1:天干;5:事干|k#an#1;5
@@ -94,7 +95,8 @@ void wopenTXTFile(const string& fileName, map<wstring, vector<In>>& dict)
 	wstring line;
 	wstringstream wss;
 	wstring zy, xin, binlih, yvn, diao, kaxih;
-	while(getline(win, line) ) { //一行
+	while(getline(win, line) ) //一行
+	{
 		if(line==L"") continue;
 		vector<wstring> input;
 		split(line, L"\t", input);
