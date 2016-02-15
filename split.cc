@@ -13,7 +13,8 @@ void split(const wstring& src, const wstring& sep, vector<wstring>& des)
 		{
 			substring = src.substr(start, index-start);
 			des.push_back(substring);
-			start = src.find_first_not_of(sep, index); //设置start为找到的位置之后，即跳过sep
+			//start = src.find_first_not_of(sep, index); //设置start为找到的位置之后，即跳过sep
+			start = src.find_first_of(sep, start)+sep.size();
 			if(start == string::npos) return;
 		}
 	} while(index != string::npos);
