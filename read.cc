@@ -68,9 +68,18 @@ int main()
 		else if(command == "save") {
 			if(!dict.empty()) {
 				cin >> zy;
-				ofstream out(zy);
-				dict.print(out);
-				out.close();
+				if(zy == "skk") {
+					cin >> zy;
+					ofstream out(zy);
+					dict.print(out);
+					out.close();
+				}
+				else if(zy == "txt") {
+					cin >> zy;
+					ofstream out(zy);
+					dict.printTXT(out);
+					out.close();
+				}
 			}
 			else cout << "请先打开一个数据文件！"<<endl;
 		}
