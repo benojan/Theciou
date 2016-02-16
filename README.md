@@ -7,6 +7,10 @@
 
 Read.cc是主程序
 
+##Dictionary.cc是字典类
+
 split.cc是分割处理函数
 
-words.txt是数据库模板
+sample.txt是文本导入格式
+
+sample.skk是生成的数据库格式
