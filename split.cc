@@ -2,10 +2,10 @@
 #include "split.h"
 using namespace std;
 
-void split(const wstring& src, const wstring& sep, vector<wstring>& des)
+void split(const string& src, const string& sep, vector<string>& des)
 {
-	wstring substring;
-	wstring::size_type start = 0, index;
+	string substring;
+	string::size_type start = 0, index;
 	do
 	{
 		index = src.find_first_of(sep, start);
