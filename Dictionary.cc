@@ -102,7 +102,7 @@ void Dictionary::openTXTFile(const string& fileName)
 	in.close();
 }
 
-void Dictionary::print(ostream& out) const//?
+void Dictionary::print(ostream& out) const
 {	//读取
 	for(auto word : dict)
 	{
@@ -134,6 +134,34 @@ void Dictionary::print(ostream& out) const//?
 			}
 		}
 		out << endl;
+	}
+}
+
+void Dictionary::printTXT(ostream& out) const
+{
+	for(auto word : dict)
+	{
+		for(auto in : word.second)
+		{
+			for(auto diao : in.diao_map)
+			{
+				out << word.first << "\t";
+				out << in.xin << "\t";
+				out << in.yvn << "\t";
+				out << in.binlih << "\t";
+				out << diao.first << "\t";
+				if(diao.second.size()) {
+					bool first = true;
+					for(auto kaxih : diao.second)
+					{
+						if(!first) out << ";";
+						else first = false;
+						out << kaxih;
+					}
+				}
+				out << endl;
+			}
+		}
 	}
 }
 
