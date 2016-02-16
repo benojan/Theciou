@@ -27,6 +27,7 @@ class Dictionary
 		bool remove(const string& zy, string xin, string yvn, string diao);
 		bool remove(const string& zy, string xin, string yvn, string diao, string kaxih);
 		void print(ostream& out) const;
+		void printTXT(ostream& out) const;
 		bool empty() const;
 	private:
 		void openTXTFile(const string& fileName);
