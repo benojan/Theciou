@@ -53,6 +53,7 @@ namespace beno {
 						if(i.diao[diao]==null) {
 							kaxihs = ..string.split(kaxih,';');
 							i.diao[diao]=kaxihs;
+							break;
 						}
 						var find_same_kaxih = false;
 						for k, kx in i.diao[diao] {
